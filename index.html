@@ -1,1 +1,182 @@
-Hello Zwik!
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zwik - A one-click Development Environment solution</title>
+    <style>
+    body, html {
+        font-family: sans-serif;
+        margin: 0;
+        height: 100%;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #container {
+        margin-top: 2em;
+        align-items: center;
+        flex: 1 0 auto;
+    }
+
+    .wrapper {
+        padding: 2rem;
+        border-radius: 15px;
+    }
+
+    code {
+        font-family: monospace;
+        font-size: 1.15em;
+        background-color: #afb8c133;
+        border-radius: 6px;
+    }
+
+    .textbox {
+        padding: 8px 6px;
+        height: 2.57em;
+        box-sizing: border-box;
+        border-color: var(--border-neutral, #3090b0);
+        border-width: 1.5px;
+        border-style: solid;
+        border: 1px
+        background-color: transparent;
+        border-radius: 3px;
+        font-size: 14px;
+        width: 45ch;
+        max-width: 100%;
+        font-family: sans-serif;
+    }
+
+    .button {
+        color: #e8e6e6;
+        padding: 11px 16px;
+        margin-top: 5px;
+        font-size: 12px;
+        cursor: pointer;
+        border-radius: 2px;
+        border: none;
+        background-color: #3090b0;
+    }
+
+    .button.delete {
+        background-color: #8b0000;
+    }
+
+    .button:hover {
+        color: #fffcfc;
+        filter: saturate(150%);
+    }
+
+    #menubar {
+        padding: 1em 1em;
+        background-color: #3090b0;
+        color: #fffcfc;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        font-weight: bold;
+    }
+
+    #menubar a {
+        color: #fffcfc;
+    }
+
+    #footer {
+        margin: 0;
+        padding: 1em 1em;
+        background-color: #3090b0;
+        color: #fffcfc;
+        flex-shrink: 0;
+    }
+
+    .comparison {
+        border: 1px solid #000;
+        border-collapse: collapse;
+    }
+    .comparison thead {
+        background-color: #afb8c133;
+    }
+    .comparison th, .comparison td {
+        border: 1px solid #000;
+        padding: 0.2em 1em;
+    }
+    .comparison td {
+        text-align: center;
+    }
+
+    .comparison th,
+    .comparison td.feature,
+    .comparison td.section {
+        text-align: left;
+    }
+
+    .comparison td.section {
+        font-weight: bold;
+    }
+
+    .token-table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 1em 0;
+    }
+
+    .token-table th,
+    .token-table td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .token-table th {
+        background-color: #f2f2f2;
+    }
+    </style>
+
+</head>
+<body>
+<nav id="menubar">
+<a href="/">Home</a>
+</nav>
+<div id="container">
+    <div class="wrapper">
+
+<h1>Your one-click Development Environment solution</h1>
+
+<h2>About Zwik</h2>
+<p>Zwik is a powerful solution for creating development environments. It ensures consistency by using the same tools and versions across projects. Zwik supports Windows, Linux, and MacOS, and requires no pre-installed dependencies.</p>
+
+<h2>Cool! How to get started?</h2>
+<ol>
+    <li>Download the bootstrap script for <a href="/zwik_environment.sh" target="_blank">Linux/Mac</a> or <a href="/zwik_environment.bat"  target="_blank">Windows</a>.</li>
+    <li>Save the script to the root of your project folder.</li>
+    <li>Run the script, the first time it can take some time to create an initial environment.</li>
+    <li>The file <code>.zwik/zwik_environment.yaml</code> is created and can be adapted to add the packages you need.</li>
+</ol>
+
+<h2>Available Tools</h2>
+<p>By default Zwik searches on <a href="https://conda-forge.org/">conda-forge</a> for packages.</p>
+
+<h2>How does it work?</h2>
+<p>Zwik is based on the <a href="https://mamba.readthedocs.io/en/latest/" target="_blank">Mamba</a> open source package manager.</p>
+
+<h2>Contribute to Zwik</h2>
+
+<p>If a specific package is missing, make it available on conda-forge and it will also automatically be available for Zwik.</p>
+
+<p>To contribute to the Zwik client itself, check the <a href="https://github.com/zwikdev/zwik-client.git">client repository</a>.</p>
+
+    </div>
+</div>
+
+<div id="footer">
+<div class="inner">
+Zwik-web
+</div>
+</div>
+</body>
+</html>
