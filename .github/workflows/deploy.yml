@@ -26,8 +26,8 @@ jobs:
       - name: Checkout client
         uses: actions/checkout@v4
         with:
-          repository: zwik-client
-          path: zwikdev/zwik-client
+          repository: zwikdev/zwik-client
+          path: zwik-client
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
