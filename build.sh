@@ -11,7 +11,9 @@ wget --progress=dot:mega https://github.com/conda-forge/miniforge/releases/downl
 wget --progress=dot:mega https://github.com/conda-forge/miniforge/releases/download/24.3.0-0/Miniforge3-24.3.0-0-Windows-x86_64.exe -O dist/install-data/Miniforge3-24.3.0-0-Windows-x86_64.exe
 
 cp zwik-client/scripts/zwik_client.py dist/install-data/zwik_client.py
+md5sum dist/install-data/zwik_client.py | awk '{print $1}' > dist/install-data/zwik_client.py.md5
 cp zwik-client/scripts/zwik_client_settings.py dist/install-data/zwik_client_settings.py
+md5sum dist/install-data/zwik_client_settings.py | awk '{print $1}' > dist/install-data/zwik_client_settings.py.md5
 
 cp zwik-client/scripts/zwik-install.sh dist/zwik-install.sh
 cp zwik-client/scripts/zwik-install.bat dist/zwik-install.bat
