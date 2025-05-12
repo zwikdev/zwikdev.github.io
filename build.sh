@@ -1,10 +1,9 @@
 #!/usr/bin/env sh
 
-env
-
 mkdir -p dist/install-data
 
 cp index.html dist/index.html
+sed -i "s|<!-- GIT_SHA -->|$GITHUB_SHA|" dist/index.html
 
 wget --progress=dot:mega https://github.com/conda-forge/miniforge/releases/download/24.3.0-0/Miniforge3-24.3.0-0-Linux-x86_64.sh -O dist/install-data/Miniforge3-24.3.0-0-Linux-x86_64.sh
 wget --progress=dot:mega https://github.com/conda-forge/miniforge/releases/download/24.3.0-0/Miniforge3-24.3.0-0-MacOSX-x86_64.sh -O dist/install-data/Miniforge3-24.3.0-0-MacOSX-x86_64.sh
